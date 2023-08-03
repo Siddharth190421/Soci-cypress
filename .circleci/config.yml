@@ -6,7 +6,7 @@ version: 2.1
 # See: https://circleci.com/docs/configuration-reference/#jobs
 
 orbs:
-  cypress: cypress-io/cypress@1
+  cypress: cypress-io/cypress@3
 
 
 jobs:
@@ -83,6 +83,7 @@ workflows:
             - say-bye
           type: approval
       - cypress/run:
+          start-command: 'npm run start'
           requires:
             - say-bye
         
