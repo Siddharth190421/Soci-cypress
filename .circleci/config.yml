@@ -52,8 +52,8 @@ workflows:
       - say-hello
       - say-bye:
           requires:
-           - say-hello
+           - Whatsup
       - Whatsup:
           requires:
-           - say-bye
+           - say-hello
         
